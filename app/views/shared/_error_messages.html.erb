@@ -1,0 +1,10 @@
+<% if object.errors[field].any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(object.errors[field].count, "error") %> prohibited this record from being saved:</h2>
+		<ul>
+			<% object.errors[field].each do |error| %>
+				<li><%= error %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
